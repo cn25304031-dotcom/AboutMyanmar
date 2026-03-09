@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kachin — Culture & Heritage of Myanmar</title>
+  <meta name="description" content="Premium introduction to the Kachin ethnic group in Myanmar: culture, traditions, religion, famous places, flag, and representative animals." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --card: #111318;
+      --text: #eef1f5;
+      --muted: #aab3c2;
+      --brand: #29b36b;
+      --ring: #3ad07e;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji",sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 70% -10%, #1a1f2a 20%, transparent 60%), linear-gradient(180deg, #0a0b0f, #08090d 60%);
+      line-height: 1.6;
+    }
+    a{color: var(--brand); text-decoration: none}
+    a:hover{text-decoration: underline}
+    .container{max-width: var(--maxw); margin: 0 auto; padding: 24px}
+    header{
+      position: sticky; top:0; z-index: 20; backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(8,10,14,.85), rgba(8,10,14,.55));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px}
+    .brand .dot{width:10px; height:10px; border-radius:50%; background:var(--ring); box-shadow:0 0 12px var(--ring)}
+    .nav a{color:var(--text); opacity:.9; padding:8px 12px; border-radius:10px}
+    .nav a:hover{background:rgba(255,255,255,.06)}
+
+    .hero{
+      padding: 72px 0 32px;
+      display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center;
+    }
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr; padding-top:48px} }
+    .hero h1{font-size: clamp(32px, 4.5vw, 56px); line-height:1.1; margin:0 0 12px}
+    .hero p{color:var(--muted); font-size: clamp(14px, 1.5vw, 18px); margin:0}
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .card-pad{padding:22px}
+    .pill{
+      display:inline-block; font-size:12px; color:#0a0b0f; background:linear-gradient(90deg, var(--ring), #7df0b2);
+      padding:6px 10px; border-radius:999px; font-weight:700; letter-spacing:.25px; margin-bottom:10px;
+    }
+    section h2{font-size: clamp(22px, 2.4vw, 32px); margin: 0 0 10px}
+    .muted{color:var(--muted)}
+    .grid-2{display:grid; grid-template-columns: 1fr 1fr; gap:24px}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:24px}
+    @media (max-width: 1000px){ .grid-3{grid-template-columns: 1fr 1fr} }
+    @media (max-width: 700px){ .grid-2, .grid-3{grid-template-columns:1fr} }
+
+    .list{display:grid; gap:10px; margin: 12px 0 0; padding:0; list-style:none}
+    .list li{background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); padding:14px 16px; border-radius:12px}
+
+    .flag-wrap{padding:18px}
+    .flag-caption{display:flex; align-items:center; justify-content:space-between; color:var(--muted); font-size:14px; padding:0 4px 12px}
+
+    .gallery{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
+    @media (max-width: 900px){ .gallery{grid-template-columns: 1fr 1fr} }
+    @media (max-width: 560px){ .gallery{grid-template-columns: 1fr} }
+    .gallery figure{
+      border-radius: 14px; overflow:hidden; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03)
+    }
+    /* default gallery images (keeps a consistent card height & cropped look) */
+    .gallery img{display:block; width:100%; height:240px; object-fit:cover}
+    .gallery figcaption{padding:10px 12px; font-size:14px; color:var(--muted)}
+
+    /* portrait/tall images (for traditional dress) — keep natural aspect ratio and avoid cropping */
+    .gallery figure.portrait img {
+      height: auto;
+      object-fit: contain;
+      background: rgba(0,0,0,0.03); /* small neutral background if image has whitespace */
+    }
+
+    .foot{margin: 42px 0 24px; color: var(--muted); font-size: 13px; text-align:center}
+    .nav-links a {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--ring), #7df0b2);
+  color: #0a0b0f;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(58, 208, 126, 0.4);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(58, 208, 126, 0.8);
+  opacity: 0.95;
+}
+
+
+    [data-fade]{opacity:0; transform: translateY(8px); animation: fadeUp .8s ease .05s forwards}
+    [data-fade="1"]{animation-delay:.05s}
+    [data-fade="2"]{animation-delay:.15s}
+    [data-fade="3"]{animation-delay:.25s}
+    @keyframes fadeUp{to{opacity:1; transform:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>カチン族</span>
+      </div>
+      <nav class="nav-links">
+        <a href="ethnic.html">← 戻る</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="pill" data-fade="1">Kachin • Jinghpaw Wunpawng</div>
+        <h1 data-fade="2">カチン文化と遺産</h1>
+        <p class="muted" data-fade="3">
+          カチン族（ジンポー・ウンポーン）は、ミャンマー北部の高地全域に複数のサブグループを形成しています。
+          精巧なビーズ細工、織物、高地農業で知られるカチン族のコミュニティは、氏族の絆と活気ある祭りを大切にしています。
+        </p>
+      </div>
+
+      <!-- KACHIN FLAG (direct file URL so it always shows) -->
+      <figure id="flag" class="card" aria-label="Flag of Kachin State">
+        <div class="flag-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Flag_of_Kachin_State.svg"
+               alt="Flag of Kachin State" style="width:100%;height:auto;">
+          <figcaption class="flag-caption">
+            <span>カチン州</span>
+            <small>カチン族のアイデンティティの象徴</small>
+          </figcaption>
+        </div>
+      </figure>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="card card-pad" id="about" data-fade="1">
+      <h2>カチン民族について</h2>
+      <p class="muted">
+        カチン族は、ジンポー語、ラワン語、リスー語系など、独自の慣習を持つ複数の言語グループから構成されています。
+        伝統的な生計手段には、焼畑農業や段々畑農業、林産物の生産、国境を越えた交易などがあります。
+        地域社会の生活には、氏族制度、教会、そして有名なマナウ祭が見られます。
+      </p>
+      <ul class="list">
+        <li><strong>言語:</strong> ジンポー語および関連カチン語、ビルマ語</li>
+        <li><strong>宗教:</strong> 主にキリスト教。一部の地域では伝統的な信仰が残っている。</li>
+        <li><strong>地域:</strong> カチン州 (ミッチーナー、バモ、プタオ) および近隣の国境地帯</li>
+      </ul>
+    </section>
+
+    <!-- CULTURE & TRADITIONS -->
+    <section class="grid-2" style="margin-top:24px">
+      <article class="card card-pad" data-fade="2">
+        <h2>テキスタイル、ビーズ、音楽</h2>
+        <p class="muted">
+          カチン族の芸術には、豪華なビーズ細工や織物による衣服が含まれます。儀式用の衣装には、氏族特有の色彩や模様がしばしば見られます。
+        </p>
+        <ul class="list">
+          <li>ビーズネックレスと銀細工</li>
+          <li>手織りのチュニックとショール</li>
+          <li>祭りの音楽のための太鼓と銅鑼</li>
+        </ul>
+      </article>
+
+      <article class="card card-pad" data-fade="3">
+        <h2>フェスティバルとコミュニティ</h2>
+        <p class="muted">
+          マナウの祭りでは、高いトーテムの周りでのダンス、歌、祝宴、部族間の集まりなどが披露されます。
+        </p>
+        <ul class="list">
+          <li><strong>マナウ</strong> — トーテムポールを使った共同ダンスフェスティバル。</li>
+          <li><strong>クリスマス/新年</strong> — 教会の礼拝と文化的なパフォーマンス。</li>
+          <li><strong>収穫祭と一族の儀式</strong> — 感謝と親族関係の儀式。</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- TRADITIONAL DRESS  -->
+    
+<section id="dress" class="card card-pad" style="margin-top:24px">
+  <h2>カチン族の伝統衣装</h2>
+  <p class="muted">優雅さと文化的誇りを表す伝統衣装：</p>
+
+  <div class="gallery" style="margin-top:10px">
+    
+    <figure class="portrait">
+      <img src="images/kachin_address.jpg" alt="カチン族の伝統衣装" loading="lazy">
+      <figcaption>カチン族の伝統衣装 — 鮮やかな色彩と精巧なビーズ装飾が特徴で、祭りや式典の際に着用されます。</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+        
+    </section>
+
+    <!-- FAMOUS PLACES -->
+    <section id="places" class="card card-pad" style="margin-top:24px">
+      <h2>有名な場所</h2>
+      <div class="grid-3" style="margin-top:10px">
+        <div class="card card-pad">
+          <h3>ミッチーナ</h3>
+          <p class="muted">エーヤワディ川沿いの州都。文化と貿易の中心地。</p>
+        </div>
+        <div class="card card-pad">
+          <h3>プタオとカカボ・ラジ</h3>
+          <p class="muted">ミャンマーの最高峰と高山の生物多様性への玄関口。</p>
+        </div>
+        <div class="card card-pad">
+          <h3>バモ</h3>
+          <p class="muted">活気ある市場がある中国国境近くの歴史的な川沿いの町。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAMOUS FOOD -->
+    <section id="food" class="card card-pad" style="margin-top:24px">
+      <h2>カチンの名物料理</h2>
+      <p class="muted">カチン州で楽しまれている、ハーブやスパイスを豊富に使い、独特の調理法を特徴とする伝統料理:</p>
+
+      <div class="gallery" style="margin-top:10px">
+        <figure>
+          <img src="images/kachin_pounded_beef_salad.jpg" alt="Kachin Pounded Beef Salad (Shat Jam)" loading="lazy">
+          <figcaption>カチン州の牛肉のひき肉サラダ（シャット・ジャム）。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- REPRESENTATIVE ANIMALS -->
+    <section id="animals" class="card card-pad" style="margin-top:24px">
+      <h2>代表的な動物の写真</h2>
+      <p class="muted">カチン州およびその周辺で見られる野生生物（例）</p>
+      <div class="gallery" style="margin-top:10px">
+        <figure>
+          <img src="images/taki.jpg" alt="Takin" loading="lazy">
+          <figcaption>ターキン — 高山に生息する大型の哺乳類。</figcaption>
+        </figure>
+        <figure>
+          <img src="images/cloud_leopard.jpg" alt="Clouded Leopard" loading="lazy">
+          <figcaption>ウンピョウ — 雲模様の美しい野生の猫。</figcaption>
+        </figure>
+        <figure>
+          <img src="images/asiatic_black_bear.jpg" alt="Asiatic Black Bear" loading="lazy">
+          <figcaption>ツキノワグマ — 胸に白い三日月模様を持つ中型の熊。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <p class="foot">&copy;2025 Group F - Tokyo Technical College</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      link.removeAttribute('target');
+    });
+  </script>
+</body>
+</html>
