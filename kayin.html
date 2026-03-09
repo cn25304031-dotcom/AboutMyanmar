@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kayin — Culture & Heritage of Myanmar</title>
+  <meta name="description" content="Premium introduction to the Kayin ethnic group in Myanmar: culture, traditions, religion, famous places, flag, and representative animals." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --card: #111318;
+      --text: #eef1f5;
+      --muted: #aab3c2;
+      --brand: #29b36b;
+      --ring: #3ad07e;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji",sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 70% -10%, #1a1f2a 20%, transparent 60%), linear-gradient(180deg, #0a0b0f, #08090d 60%);
+      line-height: 1.6;
+    }
+    a{color: var(--brand); text-decoration: none}
+    a:hover{text-decoration: underline}
+    .container{max-width: var(--maxw); margin: 0 auto; padding: 24px}
+    header{
+      position: sticky; top:0; z-index: 20; backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(8,10,14,.85), rgba(8,10,14,.55));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px}
+    .brand .dot{width:10px; height:10px; border-radius:50%; background:var(--ring); box-shadow:0 0 12px var(--ring)}
+    .nav a{color:var(--text); opacity:.9; padding:8px 12px; border-radius:10px}
+    .nav a:hover{background:rgba(255,255,255,.06)}
+
+    .hero{
+      padding: 72px 0 32px;
+      display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center;
+    }
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr; padding-top:48px} }
+    .hero h1{font-size: clamp(32px, 4.5vw, 56px); line-height:1.1; margin:0 0 12px}
+    .hero p{color:var(--muted); font-size: clamp(14px, 1.5vw, 18px); margin:0}
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .card-pad{padding:22px}
+    .pill{
+      display:inline-block; font-size:12px; color:#0a0b0f; background:linear-gradient(90deg, var(--ring), #7df0b2);
+      padding:6px 10px; border-radius:999px; font-weight:700; letter-spacing:.25px; margin-bottom:10px;
+    }
+    section h2{font-size: clamp(22px, 2.4vw, 32px); margin: 0 0 10px}
+    .muted{color:var(--muted)}
+    .grid-2{display:grid; grid-template-columns: 1fr 1fr; gap:24px}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:24px}
+    @media (max-width: 1000px){ .grid-3{grid-template-columns: 1fr 1fr} }
+    @media (max-width: 700px){ .grid-2, .grid-3{grid-template-columns:1fr} }
+
+    .list{display:grid; gap:10px; margin: 12px 0 0; padding:0; list-style:none}
+    .list li{background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); padding:14px 16px; border-radius:12px}
+
+    .flag-wrap{padding:18px}
+    .flag-caption{display:flex; align-items:center; justify-content:space-between; color:var(--muted); font-size:14px; padding:0 4px 12px}
+
+    .gallery{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
+    @media (max-width: 900px){ .gallery{grid-template-columns: 1fr 1fr} }
+    @media (max-width: 560px){ .gallery{grid-template-columns: 1fr} }
+    .gallery figure{
+      border-radius: 14px; overflow:hidden; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03)
+    }
+    .gallery img{display:block; width:100%; height:240px; object-fit:cover}
+    .gallery figcaption{padding:10px 12px; font-size:14px; color:var(--muted)}
+
+    .foot{margin: 42px 0 24px; color: var(--muted); font-size: 13px; text-align:center}
+    .nav-links a {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--ring), #7df0b2);
+  color: #0a0b0f;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(58, 208, 126, 0.4);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(58, 208, 126, 0.8);
+  opacity: 0.95;
+}
+
+
+    [data-fade]{opacity:0; transform: translateY(8px); animation: fadeUp .8s ease .05s forwards}
+    [data-fade="1"]{animation-delay:.05s}
+    [data-fade="2"]{animation-delay:.15s}
+    [data-fade="3"]{animation-delay:.25s}
+    @keyframes fadeUp{to{opacity:1; transform:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>カイン族</span>
+         </div>
+    <nav class="nav-links">
+        <a href="ethnic.html">← 戻る</a>
+      </nav>
+      </div>
+   
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="pill" data-fade="1">Kayin • Karen</div>
+        <h1 data-fade="2">カイン族の文化と遺産</h1>
+        <p class="muted" data-fade="3">
+        カイン族はミャンマーの主要な民族の一つで、主にカレン州とその周辺地域に居住しています。彼らは織物、竹の家、伝統舞踊、そして強い共同体精神で知られています。
+        </p>
+      </div>
+
+      <!-- FLAG -->
+      <figure id="flag" class="card" aria-label="Flag of Kayin State">
+        <div class="flag-wrap">
+          <img src="images/kayin.jpg" 
+               alt="Flag of Kayin State" style="width:100%;height:auto;">
+          <figcaption class="flag-caption">
+            <span>カイン州</span>
+            <small>カイン族のアイデンティティの象徴</small>
+          </figcaption>
+        </div>
+      </figure>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="card card-pad" id="about" data-fade="1">
+      <h2>カレン族について</h2>
+      <p class="muted">
+        カレン族には、スゴー族、ポー族、パオ族など、それぞれ独自の言語と伝統を持つ複数のサブグループが含まれます。農業、織物、漁業は彼らの日常生活において重要な役割を果たしています。
+      </p>
+      <ul class="list">
+        <li><strong>言語:</strong> スゴー・カレン語、ポー・カレン語、ビルマ語</li>
+        <li><strong>宗教:</strong> キリスト教、仏教、アニミズム</li>
+        <li><strong>地域:</strong> カレン州およびタイとの国境地域
+</li>
+      </ul>
+    </section>
+    <section class="section">
+  <h2>カイン族の伝統衣装</h2>
+  <p>
+    カイン族の伝統衣装は手織りのチュニックと縞模様で知られています。  
+    男性はシンプルなデザインの長いチュニックとロンジーを着用し、  
+    女性は袖なしのブラウスと縞模様のロンジーを着用します。  
+    ビーズや鮮やかな色彩で装飾されることが多く、文化的誇りを表現しています。
+  </p>
+  <div class="gallery" style="margin-top:10px;">
+    <figure>
+      <img src="images/kayin_dress.jpg" alt="カイン族の伝統衣装" loading="lazy"
+           style="width:100%; height:auto; object-fit:contain;">
+      <figcaption>カイン族の伝統衣装 — 縞模様のチュニック、ブラウス、ロンジー。</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+
+    <!-- CULTURE & TRADITIONS -->
+    <section class="grid-2" style="margin-top:24px">
+      <article class="card card-pad" data-fade="2">
+        <h2>織物と竹工芸</h2>
+        <p class="muted">
+          カイン織りは、鮮やかな模様のチュニックやスカーフを生み出します。竹の家や道具は、伝統的な職人技を物語っています。
+
+        </p>
+      </article>
+
+      <article class="card card-pad" data-fade="3">
+        <h2>祭りと宗教</h2>
+        <p class="muted">
+          文化イベントでは音楽、ダンス、宗教儀式などが行われます。
+
+        </p>
+        <ul class="list">
+          <li><strong>カイン族の新年</strong> — ダンス、音楽、スポーツの競技。</li>
+          <li><strong>収穫祭</strong> — その年の収穫に対する感謝の祭り。</li>
+          <li><strong>クリスマス</strong> — キリスト教コミュニティで広く祝われます。</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- FAMOUS PLACES -->
+    <section id="places" class="card card-pad" style="margin-top:24px">
+      <h>有名な場所</h></h2>
+      <div class="grid-3" style="margin-top:10px">
+        <div class="card card-pad">
+          <h3>パアン</h3>
+          <p class="muted">石灰岩の山々と洞窟に囲まれた州都。</p>
+        </div>
+        <div class="card card-pad">
+          <h3>チャウ・カラト・パゴダ</h3>
+          <p class="muted">石灰岩の尖塔の上に建つユニークな仏塔。</p>
+        </div>
+        <div class="card card-pad">
+          <h3>サダン洞窟</h3>
+          <p class="muted">仏教寺院と美しいボート出口を備えた大きな洞窟群。</p>
+        </div>
+      </div>
+    </section>
+    <!-- FAMOUS FOOD -->
+<section id="food" class="card card-pad" style="margin-top:24px">
+  <h2>カインの名物料理</h2>
+  <p class="muted">新鮮なハーブ、軽い風味、お祝いの料理で知られる伝統的なカイン料理。</p>
+
+  <div class="gallery" style="margin-top:10px">
+
+    <figure>
+      <img src="images/kayin_bamboo_shoot_curry.jpg"
+           alt="Kayin Bamboo Shoot Curry" loading="lazy">
+      <figcaption>カイン・タケノコカレー ― 柔らかいタケノコを地元のスパイスで煮込み、豚肉や鶏肉を加えることもあります。カイン族の森の風味への愛を反映した家庭料理です</figcaption>
+    </figure>
+
+  </div>
+</section>
+
+
+    <!-- REPRESENTATIVE ANIMALS -->
+<section id="animals" class="card card-pad" style="margin-top:24px">
+  <h2>代表的な動物の写真</h2>
+  <p class="muted">カレン地方およびその周辺で見られる野生生物（例）</p>
+  <div class="gallery" style="margin-top:10px">
+    <figure>
+      <img src="images/sambar_deer.jpg" 
+           alt="Sambar Deer" loading="lazy">
+      <figcaption>サンバー鹿 — この地域の草原や森林によく見られる大型の森林鹿。s</figcaption>
+    </figure>
+    <figure>
+      <img src="images/indochinese_tiger.jpg" 
+           alt="Indochinese Tiger" loading="lazy">
+      <figcaption>インドシナトラ — かつてはカレン州の森林に広く生息していた希少な大型ネコ科動物ですが、現在では絶滅の危機に瀕しています。</figcaption>
+    </figure>
+  </div>
+</section>
+</form>
+
+    
+  </main>
+
+    <footer>
+    <p>&copy;2025 Group F - Tokyo Technical College</p>
+  </footer>
+  </main>
+</body>
+</html>
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    link.removeAttribute('target');
+  });
+</script>
