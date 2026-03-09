@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ミャンマー — 公式紹介</title>
+  <meta name="description" content="ミャンマーの公式紹介：国旗、地図、歴史、自然など。" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --card: #111318;
+      --text: #eef1f5;
+      --muted: #aab3c2;
+      --brand: #29b36b;
+      --ring: #3ad07e;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji",sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 70% -10%, #1a1f2a 20%, transparent 60%) , linear-gradient(180deg, #0a0b0f, #08090d 60%);
+      line-height: 1.6;
+    }
+    a{color: var(--brand); text-decoration: none}
+    a:hover{text-decoration: underline}
+    .container{max-width: var(--maxw); margin: 0 auto; padding: 24px}
+    header{
+      position: sticky; top:0; z-index: 20; backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(8,10,14,.85), rgba(8,10,14,.55));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px}
+    .brand .dot{width:10px; height:10px; border-radius:50%; background:var(--ring); box-shadow:0 0 12px var(--ring)}
+    .nav a{color:var(--text); opacity:.9; padding:8px 12px; border-radius:10px}
+    .nav a:hover{background:rgba(255,255,255,.06)}
+    .hero{
+      padding: 72px 0 24px;
+      display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center;
+    }
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr; padding-top:48px} }
+    .hero h1{font-size: clamp(32px, 4.5vw, 56px); line-height:1.1; margin:0 0 12px}
+    .hero p{color:var(--muted); font-size: clamp(14px, 1.5vw, 18px); margin:0}
+    .flag-card,.map-card,.info-card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .flag-wrap{padding:18px}
+    .flag-caption{display:flex; align-items:center; justify-content:space-between; color:var(--muted); font-size:14px; padding:0 4px 4px}
+    .grid{
+      display:grid; grid-template-columns: repeat(3, 1fr); gap:24px; margin: 28px 0 8px;
+    }
+    @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
+    .map-card iframe{width:100%; height:360px; border:0; display:block}
+    section h2{font-size: clamp(22px, 2.4vw, 32px); margin: 0 0 10px}
+    .info-card{padding:22px}
+    .pill{
+      display:inline-block; font-size:12px; color:#0a0b0f; background:linear-gradient(90deg, var(--ring), #7df0b2);
+      padding:6px 10px; border-radius:999px; font-weight:700; letter-spacing:.25px; margin-bottom:10px;
+    }
+    .list{
+      display:grid; gap:10px; margin: 12px 0 0; padding:0; list-style:none;
+    }
+    .list li{
+      background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.06);
+      padding:14px 16px; border-radius:12px;
+    }
+    .foot{
+      margin: 42px 0 24px; color: var(--muted); font-size: 13px; text-align:center;
+    }
+    .nav-links a {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--ring), #7df0b2);
+  color: #0a0b0f;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(58, 208, 126, 0.4);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(58, 208, 126, 0.8);
+  opacity: 0.95;
+}
+.nav-links a {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--ring), #7df0b2);
+  color: #0a0b0f;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(58, 208, 126, 0.4);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(58, 208, 126, 0.8);
+  opacity: 0.95;
+}
+
+
+    [data-fade]{opacity:0; transform: translateY(8px); animation: fadeUp .8s ease .05s forwards}
+    [data-fade="1"]{animation-delay:.05s}
+    [data-fade="2"]{animation-delay:.15s}
+    [data-fade="3"]{animation-delay:.25s}
+    @keyframes fadeUp{to{opacity:1; transform:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>ミャンマー</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">← 戻る</a>
+      </nav>
+    </div>
+    
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="pill" data-fade="1">ようこそ • မင်္ဂလာပါ • ミンガラーバー</div>
+        <h1 data-fade="2">ミャンマーを知ろう</h1>
+        <p data-fade="3">
+          南アジアと東南アジアの交差点に位置するミャンマーは、静かなパゴダ、美しい自然、多様な文化で知られています。
+        </p>
+      </div>
+
+      <!-- FLAG (SVG) -->
+      <figure class="flag-card" aria-label="ミャンマーの国旗">
+        <div class="flag-wrap">
+          <svg viewBox="0 0 300 200" width="100%" height="auto" role="img" aria-labelledby="flagTitle flagDesc">
+            <title id="flagTitle">ミャンマーの国旗</title>
+            <desc id="flagDesc">黄色・緑・赤の水平三色旗の中央に白い五芒星。</desc>
+            <rect width="300" height="200" fill="#F8D400"/>
+            <rect y="66.666" width="300" height="66.667" fill="#34B233"/>
+            <rect y="133.333" width="300" height="66.667" fill="#EA2839"/>
+            <g transform="translate(150,100)">
+              <polygon points="0,-62 17.6,-18.9 64.2,-18.9 26.3,7.2 40.6,52.3 0,26.8 -40.6,52.3 -26.3,7.2 -64.2,-18.9 -17.6,-18.9" fill="#ffffff"/>
+            </g>
+          </svg>
+          <figcaption class="flag-caption">
+            <span>ミャンマーの国旗</span>
+            <small>採用年: 2010年</small>
+          </figcaption>
+        </div>
+      </figure>
+    </section>
+
+    <!-- CONTENT GRID -->
+    <section class="grid">
+      <!-- About -->
+      <article id="about" class="info-card" data-fade="1">
+        <h2>ミャンマーについて</h2>
+        <p>
+          ミャンマー（旧ビルマ）はインド、中国、ラオス、タイ、ベンガル湾に接しています。  
+          100以上の民族と言語を持つ文化の多様性が特徴です。エーヤワディー川は北から南へ流れ、肥沃な平野を形成し、山岳地帯が北部と東部を囲んでいます。
+        </p>
+        <ul class="list" aria-label="主な情報">
+          <li><strong>首都:</strong> ネピドー • <strong>最大都市:</strong> ヤンゴン</li>
+          <li><strong>面積:</strong> 約676,600 km² • <strong>人口:</strong> 約5,500万人（推定）</li>
+          <li><strong>言語:</strong> ビルマ語（公用語）＋地域言語多数</li>
+          <li><strong>通貨:</strong> ミャンマー・チャット (MMK)</li>
+        </ul>
+      </article>
+
+      <!-- History -->
+      <article id="history" class="info-card" data-fade="2">
+        <h2>歴史の概要</h2>
+        <p>
+          ピューの都市国家やバガン王朝（9～13世紀）のレンガ寺院から、コンバウン朝の王国まで、  
+          ミャンマーの歴史には統一と植民地支配の時代が含まれます。イギリスは19世紀から1948年の独立まで支配しました。  
+          独立後も政治的変動が続く中、文化伝統は息づいています。
+        </p>
+        <ul class="list">
+          <li><strong>古代:</strong> ピュー・モン文化、バガン王朝（9～13世紀）</li>
+          <li><strong>近世:</strong> タウンゴー朝・コンバウン朝</li>
+          <li><strong>植民地時代:</strong> 英国統治（19世紀～1948年）</li>
+          <li><strong>現代:</strong> 1948年独立後の政治変動</li>
+        </ul>
+      </article>
+
+      <!-- Nature -->
+      <article id="nature" class="info-card" data-fade="3">
+        <h2>自然と生物多様性</h2>
+        <p>
+          ミャンマーはマングローブ沿岸やチークの森から、東南アジア最高峰のカカボラジ山付近の高山草原まで、多様な自然を有します。  
+          象、ガウル、テナガザル、希少な鳥類など、多様な生物が湿地、森林、カルスト地形に生息しています。  
+          国立公園や保護区は主要な生息地を守り、地域社会は川や森の資源管理にも取り組んでいます。
+        </p>
+        <ul class="list">
+          <li><strong>代表的な場所:</strong> インレー湖、バガン平原、メルギ諸島</li>
+          <li><strong>最高峰:</strong> カカボラジ山（5,881 m）</li>
+          <li><strong>主な河川:</strong> エーヤワディー川</li>
+        </ul>
+      </article>
+    </section>
+
+   <footer>
+    <p>&copy;2025 Group F - Tokyo Technical College</p>
+  </footer>  </main>
+</body>
+</html>
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    link.removeAttribute('target');
+  });
+</script>
