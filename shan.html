@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shan — Culture & Heritage of Myanmar</title>
+  <meta name="description" content="Premium introduction to the Shan ethnic group in Myanmar: food, festivals, religion, famous places, flag, and representative animals." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --card: #111318;
+      --text: #eef1f5;
+      --muted: #aab3c2;
+      --brand: #29b36b;
+      --ring: #3ad07e;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji",sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 70% -10%, #1a1f2a 20%, transparent 60%), linear-gradient(180deg, #0a0b0f, #08090d 60%);
+      line-height: 1.6;
+    }
+    a{color: var(--brand); text-decoration: none}
+    a:hover{text-decoration: underline}
+    .container{max-width: var(--maxw); margin: 0 auto; padding: 24px}
+    header{
+      position: sticky; top:0; z-index: 20; backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(8,10,14,.85), rgba(8,10,14,.55));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px}
+    .brand .dot{width:10px; height:10px; border-radius:50%; background:var(--ring); box-shadow:0 0 12px var(--ring)}
+    .nav a{color:var(--text); opacity:.9; padding:8px 12px; border-radius:10px}
+    .nav a:hover{background:rgba(255,255,255,.06)}
+
+    .hero{
+      padding: 72px 0 32px;
+      display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center;
+    }
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr; padding-top:48px} }
+    .hero h1{font-size: clamp(32px, 4.5vw, 56px); line-height:1.1; margin:0 0 12px}
+    .hero p{color:var(--muted); font-size: clamp(14px, 1.5vw, 18px); margin:0}
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .card-pad{padding:22px}
+    .pill{
+      display:inline-block; font-size:12px; color:#0a0b0f; background:linear-gradient(90deg, var(--ring), #7df0b2);
+      padding:6px 10px; border-radius:999px; font-weight:700; letter-spacing:.25px; margin-bottom:10px;
+    }
+    section h2{font-size: clamp(22px, 2.4vw, 32px); margin: 0 0 10px}
+    .muted{color:var(--muted)}
+    .grid-2{display:grid; grid-template-columns: 1fr 1fr; gap:24px}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:24px}
+    @media (max-width: 1000px){ .grid-3{grid-template-columns: 1fr 1fr} }
+    @media (max-width: 700px){ .grid-2, .grid-3{grid-template-columns:1fr} }
+
+    .list{display:grid; gap:10px; margin: 12px 0 0; padding:0; list-style:none}
+    .list li{background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); padding:14px 16px; border-radius:12px}
+
+    .flag-wrap{padding:18px}
+    .flag-caption{display:flex; align-items:center; justify-content:space-between; color:var(--muted); font-size:14px; padding:0 4px 12px}
+
+    .gallery{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
+    @media (max-width: 900px){ .gallery{grid-template-columns: 1fr 1fr} }
+    @media (max-width: 560px){ .gallery{grid-template-columns: 1fr} }
+    .gallery figure{
+      border-radius: 14px; overflow:hidden; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03)
+    }
+    .gallery img{display:block; width:100%; height:240px; object-fit:cover}
+    .gallery figcaption{padding:10px 12px; font-size:14px; color:var(--muted)}
+
+    .foot{margin: 42px 0 24px; color: var(--muted); font-size: 13px; text-align:center}
+    .nav-links a {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--ring), #7df0b2);
+  color: #0a0b0f;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(58, 208, 126, 0.4);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(58, 208, 126, 0.8);
+  opacity: 0.95;
+}
+
+
+    /* subtle entrance */
+    [data-fade]{opacity:0; transform: translateY(8px); animation: fadeUp .8s ease .05s forwards}
+    [data-fade="1"]{animation-delay:.05s}
+    [data-fade="2"]{animation-delay:.15s}
+    [data-fade="3"]{animation-delay:.25s}
+    @keyframes fadeUp{to{opacity:1; transform:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>シャン民族</span>
+      </div>
+      <nav class="nav-links">
+        <a href="ethnic.html">← 戻る</a>
+      </nav>
+      
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="pill" data-fade="1">Shan • တႆး • Tai</div>
+        <h1 data-fade="2">シャン文化と遺産</h1>
+        <p class="muted" data-fade="3">
+          シャン族（タイ族）はミャンマーの主要な民族グループの一つで、シャン州を中心に全国各地、そしてメコン川流域に居住しています。彼らは活気あふれる祭り、上座部仏教の伝統、そして繊細な麺料理や豆腐料理で知られています。
+
+        </p>
+      </div>
+
+      <!-- SHAN FLAG (inline SVG) -->
+      <figure id="flag" class="card" aria-label="Flag of Shan State">
+        <div class="flag-wrap">
+          <!-- Shan State flag: horizontal tricolor (yellow, green, red) with white disk centered -->
+          <svg viewBox="0 0 300 200" width="100%" height="auto" role="img" aria-labelledby="flagTitle flagDesc">
+            <title id="flagTitle">Flag of Shan State</title>
+            <desc id="flagDesc">Horizontal tricolor of yellow, green, and red with a central white circle.</desc>
+            <rect width="300" height="200" fill="#F8D400"/>
+            <rect y="66.666" width="300" height="66.667" fill="#34B233"/>
+            <rect y="133.333" width="300" height="66.667" fill="#EA2839"/>
+            <circle cx="150" cy="100" r="30" fill="#ffffff"/>
+          </svg>
+          <figcaption class="flag-caption">
+            <span>シャン州</span>
+            <small>シャン族のアイデンティティの象徴</small>
+          </figcaption>
+        </div>
+      </figure>c
+    </section>
+
+    <!-- ABOUT -->
+    <section class="card card-pad" id="about" data-fade="1" aria-label="About the Shan ethnic group">
+      <h2>シャン民族について</h2>
+      <p class="muted">
+        シャン族はタイ族に属します。歴史的にタイ王国と結びつきがあり、シャン語（タイ語）に加え、しばしばビルマ語も話します。伝統的な生活は、高原や渓谷での稲作、交易、手工芸などです。社会生活は仏教寺院、地元の市場、そして季節の祭りを中心に展開します。
+      </p>
+      <ul class="list">
+        <li><strong>言語:</strong>シャン語（タイ語）、ビルマ語、および地域の言語</li>
+        <li><strong>宗教:</strong> 主に上座部仏教（テーラワーダ）、地域の精霊（ナット）信仰も併存</li>
+<li><strong>地域:</strong> シャン州（タウンジー、ケントゥン、ラシオ、シーパウ）</li>
+
+    </section>
+    <section class="section">
+  <h2>伝統衣装</h2>
+  <p class="muted">
+    シャン族の伝統衣装は、男性・女性ともに色鮮やかなロングイが特徴です。
+    男性はチェック柄や縞模様のロングイにシンプルなシャツを着用し、
+    女性は刺繍入りのブラウスに柄入りのロングイを合わせ、スカーフや帯で装飾することもあり、
+    活気ある文化を表現しています。
+  </p>
+  <div class="gallery" style="margin-top:10px;">
+    <figure>
+      <img src="images/shan_dress.jpg" alt="シャン族の伝統衣装" loading="lazy"
+           style="width:100%; height:auto; object-fit:contain;">
+      <figcaption>シャン族の伝統衣装 — ロングイ、刺繍入りブラウス、スカーフ</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+
+    <!-- FOOD + FESTIVALS/RELIGION -->
+    <section class="grid-2" style="margin-top:24px">
+  <article id="food" class="card card-pad" data-fade="2" aria-label="伝統的なシャン料理">
+    <h2>伝統料理</h2>
+    <p class="muted">
+      シャン料理は香り豊かであっさりしており、米、麺、トマト、ハーブ、豆類を中心にバランスよく構成されています。
+    </p>
+    <ul class="list">
+      <li><strong>シャンヌードル（Shan khauk swè）</strong> — 平たい米麺に旨味のあるトマトベースのソースをかけた料理。</li>
+      <li><strong>トーフヌエイ（温かいシャン豆腐）</strong> — ひよこ豆を使った滑らかな豆腐で、温かくしてトッピングと共に提供。</li>
+      <li><strong>シャン豆腐サラダ</strong> — ひよこ豆豆腐をハーブ、ガーリックオイル、焼き唐辛子で和えた料理。</li>
+      <li><strong>ハーブ風味の焼き魚</strong> — 湖や川の魚に地元のハーブで味付け（インレー湖スタイル）。</li>
+    </ul>
+  </article>
+
+  <article id="festivals" class="card card-pad" data-fade="3" aria-label="祭りと宗教">
+    <h2>祭りと宗教</h2>
+    <p class="muted">
+      シャンの文化生活は仏教の暦に沿い、地域のタイ族の習慣と融合しています。
+    </p>
+    <ul class="list">
+      <li><strong>ポー・サン・ロン</strong> — 少年の出家式で、華やかな行列と音楽が伴います。</li>
+      <li><strong>シャン新年（タゾンモンの満月）</strong> — 伝統舞踊、音楽、市場が催されます。</li>
+      <li><strong>光の祭り（タゾウンダイン）</strong> — 灯籠、布施、寺院での集まり。</li>
+      <li><strong>水祭り（4月中旬）</strong> — 新年の祝いとして水掛け、功徳を積む行為、寺院参拝が行われます。</li>
+    </ul>
+    <p class="muted" style="margin-top:8px">
+      寺院や僧院（kyaung）は、功徳を積む場や学び、文化の伝承の拠点となっています。
+    </p>
+  </article>
+</section>
+
+
+    <!-- FAMOUS PLACES -->
+    <!-- 有名な場所 -->
+<section id="places" class="card card-pad" style="margin-top:24px" aria-label="シャン地域の有名な場所">
+  <h2>有名な場所</h2>
+  <div class="grid-3" style="margin-top:10px">
+    <div class="card card-pad">
+      <h3 style="margin:0 0 6px">インレー湖</h3>
+      <p class="muted">高床式の村、足漕ぎ舟、浮き畑、湖畔の僧院などがあります。</p>
+    </div>
+    <div class="card card-pad">
+      <h3 style="margin:0 0 6px">カックー・パゴダ群</h3>
+      <p class="muted">丘の上に建つ2,000以上の細長いストゥーパ。シャン族の重要な宗教施設です。</p>
+    </div>
+    <div class="card card-pad">
+      <h3 style="margin:0 0 6px">カロー & ピンデー</h3>
+      <p class="muted">ヒルステーションでのトレッキングや、仏像が並ぶ石灰岩の洞窟があります。</p>
+    </div>
+    <div class="card card-pad">
+      <h3 style="margin:0 0 6px">タウンギー</h3>
+      <p class="muted">州都。近くで熱気球祭りや文化イベントが開催されます。</p>
+    </div>
+    <div class="card card-pad">
+      <h3 style="margin:0 0 6px">シーポー</h3>
+      <p class="muted">歴史あるシャン族のサオファ（王侯）都市で、美しい渓谷や滝があります。</p>
+    </div>
+    <div class="card card-pad">
+      <h3 style="margin:0 0 6px">ケントゥン（チャイントン）</h3>
+      <p class="muted">山間盆地、伝統的な市場、シャン族・タイクン族の文化遺産があります。</p>
+    </div>
+  </div>
+</section>
+
+      <!-- FAMOUS FOOD -->
+<section id="food" class="card card-pad" style="margin-top:24px">
+  <h2>シャン族の有名な料理</h2>
+  <p class="muted">シャン丘陵地帯の人気料理。さっぱりとした味わい、ハーブ、あっさりしたスープが特徴です。</p>
+
+  <div class="gallery" style="margin-top:10px">
+    <figure>
+      <img src="images/shan_noodles.jpg"
+           alt="シャンヌードル（シャンカウクスェ）" loading="lazy">
+      <figcaption>シャンヌードル（シャンカウクスェ） — 鶏肉または豚肉を添えた米麺、トマトベースのあっさりしたソース、ハーブ入り。乾麺としても、澄んだスープと一緒に提供されます。</figcaption>
+    </figure>
+  </div>
+</section>
+
+    
+
+
+    
+    <!-- REPRESENTATIVE ANIMALS GALLERY -->
+    <section id="animals" class="card card-pad" style="margin-top:24px" aria-label="代表的な動物">
+  <h2>代表的な動物の写真</h2>
+  <p class="muted">シャン地域周辺で見られる野生動物（例示）:</p>
+  <div class="gallery" style="margin-top:10px">
+   
+    <figure>
+      <img src="images/asia_elephant.jpg" alt="アジアゾウ" loading="lazy">
+      <figcaption>アジアゾウ — 東南アジア大陸を象徴する大型動物。</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Green Peafowl.jpg" alt="グリーンピーコック" loading="lazy">
+      <figcaption>グリーンピーコック — 森林に生息する美しい鳥で、かつて地域全体に広く分布していました。</figcaption>
+    </figure>
+    <figure>
+      <img src="images/gaur.jpg" alt="ガウル（野生の牛）" loading="lazy">
+      <figcaption>ガウル — 森林の丘陵地帯に生息する力強い野生牛。</figcaption>
+    </figure>
+  </div>
+</section>
+
+    </form>
+    
+  </main>
+<footer>
+    <p>&copy;2025 Group F - Tokyo Technical College</p>
+  </footer>
+    
+  </main>
+</body>
+</html> 
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    link.removeAttribute('target');
+  });
+</script>
