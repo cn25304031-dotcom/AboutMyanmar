@@ -1,0 +1,158 @@
+/* Reset and Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Hero Section */
+
+.hero {
+  height: 80vh;
+  background: url('images/bagan.jpg') center/cover no-repeat;
+  position: relative;
+  color: white;
+}
+
+
+
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  height: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav .nav-links a:hover {
+  text-decoration: underline;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero-text {
+  margin-top: 40px;
+}
+
+.hero-text h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  background-color: #ffc107;
+  color: #333;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e6a700;
+}
+
+/* Info Section */
+.info {
+  padding: 60px 30px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.info h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.info p {
+  font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4); /* subtle transparent background */
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #222;
+}
+.group-card {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #222;
+  padding: 12px 18px;
+  margin: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.group-card:hover {
+  background-color: #f1c40f;
+  color: black;
+  transform: translateY(-3px);
+}
