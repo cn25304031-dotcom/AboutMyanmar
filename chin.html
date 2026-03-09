@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chin — Culture & Heritage of Myanmar</title>
+  <meta name="description" content="Premium introduction to the Chin ethnic group in Myanmar: culture, traditions, religion, famous places, flag, and representative animals." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --card: #111318;
+      --text: #eef1f5;
+      --muted: #aab3c2;
+      --brand: #29b36b;
+      --ring: #3ad07e;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji",sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 70% -10%, #1a1f2a 20%, transparent 60%), linear-gradient(180deg, #0a0b0f, #08090d 60%);
+      line-height: 1.6;
+    }
+    a{color: var(--brand); text-decoration: none}
+    a:hover{text-decoration: underline}
+    .container{max-width: var(--maxw); margin: 0 auto; padding: 24px}
+    header{
+      position: sticky; top:0; z-index: 20; backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(8,10,14,.85), rgba(8,10,14,.55));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px}
+    .brand .dot{width:10px; height:10px; border-radius:50%; background:var(--ring); box-shadow:0 0 12px var(--ring)}
+    .nav a{color:var(--text); opacity:.9; padding:8px 12px; border-radius:10px}
+    .nav a:hover{background:rgba(255,255,255,.06)}
+
+    .hero{
+      padding: 72px 0 32px;
+      display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center;
+    }
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr; padding-top:48px} }
+    .hero h1{font-size: clamp(32px, 4.5vw, 56px); line-height:1.1; margin:0 0 12px}
+    .hero p{color:var(--muted); font-size: clamp(14px, 1.5vw, 18px); margin:0}
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .card-pad{padding:22px}
+    .pill{
+      display:inline-block; font-size:12px; color:#0a0b0f; background:linear-gradient(90deg, var(--ring), #7df0b2);
+      padding:6px 10px; border-radius:999px; font-weight:700; letter-spacing:.25px; margin-bottom:10px;
+    }
+    section h2{font-size: clamp(22px, 2.4vw, 32px); margin: 0 0 10px}
+    .muted{color:var(--muted)}
+    .grid-2{display:grid; grid-template-columns: 1fr 1fr; gap:24px}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:24px}
+    @media (max-width: 1000px){ .grid-3{grid-template-columns: 1fr 1fr} }
+    @media (max-width: 700px){ .grid-2, .grid-3{grid-template-columns:1fr} }
+
+    .list{display:grid; gap:10px; margin: 12px 0 0; padding:0; list-style:none}
+    .list li{background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); padding:14px 16px; border-radius:12px}
+
+    .flag-wrap{padding:18px}
+    .flag-caption{display:flex; align-items:center; justify-content:space-between; color:var(--muted); font-size:14px; padding:0 4px 12px}
+
+    .gallery{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
+    @media (max-width: 900px){ .gallery{grid-template-columns: 1fr 1fr} }
+    @media (max-width: 560px){ .gallery{grid-template-columns: 1fr} }
+    .gallery figure{
+      border-radius: 14px; overflow:hidden; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03)
+    }
+    .gallery img{display:block; width:100%; height:240px; object-fit:cover}
+    .gallery figcaption{padding:10px 12px; font-size:14px; color:var(--muted)}
+
+    .foot{margin: 42px 0 24px; color: var(--muted); font-size: 13px; text-align:center}
+    .nav-links a {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--ring), #7df0b2);
+  color: #0a0b0f;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(58, 208, 126, 0.4);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(58, 208, 126, 0.8);
+  opacity: 0.95;
+}
+
+
+    [data-fade]{opacity:0; transform: translateY(8px); animation: fadeUp .8s ease .05s forwards}
+    [data-fade="1"]{animation-delay:.05s}
+    [data-fade="2"]{animation-delay:.15s}
+    [data-fade="3"]{animation-delay:.25s}
+    @keyframes fadeUp{to{opacity:1; transform:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>チン族</span>
+      </div>
+      <nav class="nav-links">
+        <a href="ethnic.html">← 戻る</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+  <div>
+    <!-- チン・ゾ・ライ -->
+    <div class="pill" data-fade="1">チン・ゾ・ライ</div>
+
+    <!-- メイン見出し -->
+    <h1 data-fade="2">チン文化と遺産</h1>
+
+    <!-- 説明文 -->
+    <p class="muted" data-fade="3">
+      チン族は、ミャンマー西部高地に広がる多くのサブグループから成り立っています。
+      精巧な織物、豊かな口承伝統、山岳農業で知られ、
+      チンのコミュニティは、共有する文化的つながりと並行して、
+      強い地域的アイデンティティを維持しています。
+    </p>
+  </div>
+
+  <!-- チン州の旗 -->
+  <figure id="flag" class="card" aria-label="チン州の旗">
+    <div class="flag-wrap">
+      <img src="images/chin.jpg" alt="チン州の旗" style="width:100%;height:auto;">
+      <figcaption class="flag-caption">
+        <span>チン州の旗</span>
+        <small>チンのアイデンティティの象徴</small>
+      </figcaption>
+    </div>
+  </figure>
+</section>
+
+
+    <!-- ABOUT -->
+    <section class="card card-pad" id="about" data-fade="1">
+  <h2>チン族について</h2>
+  <p class="muted">
+    チン族には、ファラム、ハカ、テディム、ミゾ関連のグループなど、多様なコミュニティが含まれ、それぞれ独自の言語や習慣があります。
+    多くの人々はビルマ語に加えてチン語を話します。伝統的な生計手段には、棚田農業、織物、丘陵地帯での交易があります。
+    コミュニティ生活は教会、マーケット、季節ごとの行事を中心に営まれています。
+  </p>
+  <ul class="list">
+    <li><strong>言語:</strong> 複数のチン語（例：ハカ語、ファラム語、テディム語）およびビルマ語</li>
+    <li><strong>宗教:</strong> 主にキリスト教、一部のコミュニティでは先住民の伝統も維持</li>
+    <li><strong>地域:</strong> ミャンマー西部（チン州）および周辺地域</li>
+  </ul>
+</section>
+
+
+    <!-- CULTURE & TRADITIONS -->
+    <section class="grid-2" style="margin-top:24px">
+  <article class="card card-pad" data-fade="2">
+    <h2>織物と工芸品</h2>
+    <p class="muted">
+      チン族の織物は、複雑な模様、鮮やかな色彩、象徴的なモチーフで知られています。
+      多くの村では伝統的な手織り機が今も使われ、ショール、チュニック、ブランケットが作られています。
+    </p>
+    <ul class="list">
+      <li>手織りの綿や絹の生地</li>
+      <li>伝統的なチン族のチュニックやショール</li>
+      <li>文化的象徴を持つ幾何学模様</li>
+    </ul>
+  </article>
+
+  <article class="card card-pad" data-fade="3">
+    <h2>祭りと宗教</h2>
+    <p class="muted">
+      キリスト教が主要な信仰ですが、一部の地域ではキリスト教以前の伝統も残っています。
+    </p>
+    <ul class="list">
+      <li><strong>チン族ナショナルデー</strong> — 文化的な演奏、ダンス、スピーチ。</li>
+      <li><strong>クリスマスの祝祭</strong> — 教会での集会、歌唱、宴会。</li>
+      <li><strong>収穫祭</strong> — 作物への感謝と共同の食事。</li>
+    </ul>
+  </article>
+</section>
+
+    <!-- TRADITIONAL DRESS -->
+<section id="dress" class="card card-pad" style="margin-top:24px">
+  <h2>チン族の伝統衣装</h2>
+  <p class="muted">優雅さと文化的誇りを表す伝統的な衣装：</p>
+
+  <div class="gallery" style="margin-top:10px">
+    <figure>
+      <img src="images/chin_address.jpg" alt="チン族の伝統衣装" loading="lazy">
+      <figcaption>チン族の伝統衣装 — 手織りの衣装と色鮮やかなアクセサリー。</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+
+    <!-- FAMOUS PLACES -->
+    <section id="places" class="card card-pad" style="margin-top:24px">
+  <h2>名所</h2>
+  <div class="grid-3" style="margin-top:10px">
+    <div class="card card-pad">
+      <h3>ヴィクトリア山（ナット・マ・タウン）</h3>
+      <p class="muted">ミャンマーで3番目に高い山で、独特の動植物が生息。</p>
+    </div>
+    <div class="card card-pad">
+      <h3>ハカ</h3>
+      <p class="muted">州都で、景観や文化センターが充実。</p>
+    </div>
+    <div class="card card-pad">
+      <h3>ファラム</h3>
+      <p class="muted">涼しい気候と教会が特徴の歴史あるチンの町。</p>
+    </div>
+    <div class="card card-pad">
+      <h3>テディム</h3>
+      <p class="muted">伝統的な祭りや手工芸が楽しめる山間の町。</p>
+    </div>
+    <div class="card card-pad">
+      <h3>カンペットレット</h3>
+      <p class="muted">ナット・マ・タウン国立公園への玄関口。</p>
+    </div>
+    <div class="card card-pad">
+      <h3>ミンダット</h3>
+      <p class="muted">顔の刺青の伝統と山の景観で知られる町。</p>
+    </div>
+  </div>
+</section>
+
+    <!-- FAMOUS FOOD -->
+<section id="food" class="card card-pad" style="margin-top:24px">
+  <h2>チン州の名物料理</h2>
+  <p class="muted">山岳の風味と新鮮な地元の食材が特徴の伝統的なチン料理：</p>
+
+  <div class="gallery" style="margin-top:10px">
+    
+    <figure>
+      <img src="images/chin_sar_buu_thee.jpg"
+           alt="サー・ブー・ティー（詰め物入りヒョウタン）" loading="lazy">
+      <figcaption>サー・ブー・ティー — ヒョウタンに豚ひき肉や牛ひき肉、玉ねぎ、香辛料を詰め、軽いスープで煮込んだチン州の人気料理。</figcaption>
+    </figure>
+
+  </div>
+</section>
+
+
+
+    <!-- REPRESENTATIVE ANIMALS -->
+<section id="animals" class="card card-pad" style="margin-top:24px">
+  <h2>代表的な動物の写真</h2>
+  <p class="muted">チン州周辺で見られる野生動物の例：</p>
+  <div class="gallery" style="margin-top:10px">
+    <figure>
+      <img src="images/GreatHornbill.jpg" 
+           alt="Great Hornbill" loading="lazy">
+      <figcaption>オオサイチョウ — 熱帯林に生息する大型でカラフルな鳥。</figcaption>
+    </figure>
+    <figure>
+      <img src="images/gaur.jpg" 
+           alt="Gaur" loading="lazy">
+      <figcaption>ガウル — 森林の丘陵に生息する大型野生ウシ。</figcaption>
+    </figure>
+  </div>
+</section>
+
+</form>
+
+  </main>
+
+
+    <footer>
+    <p>&copy;2025 Group F - Tokyo Technical College</p>
+  </footer>
+  </main>
+</body>
+</html>
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    link.removeAttribute('target');
+  });
+</script>
