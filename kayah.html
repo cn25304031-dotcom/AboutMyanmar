@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kayah — Culture & Heritage of Myanmar</title>
+  <meta name="description" content="Premium introduction to the Kayah ethnic group in Myanmar: culture, traditions, religion, famous places, flag, and representative animals." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --card: #111318;
+      --text: #eef1f5;
+      --muted: #aab3c2;
+      --brand: #29b36b;
+      --ring: #3ad07e;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji",sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 70% -10%, #1a1f2a 20%, transparent 60%), linear-gradient(180deg, #0a0b0f, #08090d 60%);
+      line-height: 1.6;
+    }
+    a{color: var(--brand); text-decoration: none}
+    a:hover{text-decoration: underline}
+    .container{max-width: var(--maxw); margin: 0 auto; padding: 24px}
+    header{
+      position: sticky; top:0; z-index: 20; backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(8,10,14,.85), rgba(8,10,14,.55));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px}
+    .brand .dot{width:10px; height:10px; border-radius:50%; background:var(--ring); box-shadow:0 0 12px var(--ring)}
+    .nav a{color:var(--text); opacity:.9; padding:8px 12px; border-radius:10px}
+    .nav a:hover{background:rgba(255,255,255,.06)}
+
+    .hero{
+      padding: 72px 0 32px;
+      display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center;
+    }
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr; padding-top:48px} }
+    .hero h1{font-size: clamp(32px, 4.5vw, 56px); line-height:1.1; margin:0 0 12px}
+    .hero p{color:var(--muted); font-size: clamp(14px, 1.5vw, 18px); margin:0}
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .card-pad{padding:22px}
+    .pill{
+      display:inline-block; font-size:12px; color:#0a0b0f; background:linear-gradient(90deg, var(--ring), #7df0b2);
+      padding:6px 10px; border-radius:999px; font-weight:700; letter-spacing:.25px; margin-bottom:10px;
+    }
+    section h2{font-size: clamp(22px, 2.4vw, 32px); margin: 0 0 10px}
+    .muted{color:var(--muted)}
+    .grid-2{display:grid; grid-template-columns: 1fr 1fr; gap:24px}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:24px}
+    @media (max-width: 1000px){ .grid-3{grid-template-columns: 1fr 1fr} }
+    @media (max-width: 700px){ .grid-2, .grid-3{grid-template-columns:1fr} }
+
+    .list{display:grid; gap:10px; margin: 12px 0 0; padding:0; list-style:none}
+    .list li{background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); padding:14px 16px; border-radius:12px}
+
+    .flag-wrap{padding:18px}
+    .flag-caption{display:flex; align-items:center; justify-content:space-between; color:var(--muted); font-size:14px; padding:0 4px 12px}
+
+    .gallery{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
+    @media (max-width: 900px){ .gallery{grid-template-columns: 1fr 1fr} }
+    @media (max-width: 560px){ .gallery{grid-template-columns: 1fr} }
+
+    .gallery figure{
+      border-radius: 14px; overflow:hidden; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03);
+      display:block;
+    }
+
+    .gallery img{display:block; width:100%; height:240px; object-fit:cover}
+    .gallery figcaption{padding:10px 12px; font-size:14px; color:var(--muted)}
+
+   
+    .gallery figure.portrait {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px;
+      min-height:240px; 
+    }
+    .gallery figure.portrait img {
+      height: auto;
+      max-height:560px; 
+      width: auto;
+      max-width:100%;
+      object-fit:contain;
+      display:block;
+    }
+
+    .foot{margin: 42px 0 24px; color: var(--muted); font-size: 13px; text-align:center}
+    .nav-links a {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--ring), #7df0b2);
+  color: #0a0b0f;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(58, 208, 126, 0.4);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(58, 208, 126, 0.8);
+  opacity: 0.95;
+}
+
+
+    [data-fade]{opacity:0; transform: translateY(8px); animation: fadeUp .8s ease .05s forwards}
+    [data-fade="1"]{animation-delay:.05s}
+    [data-fade="2"]{animation-delay:.15s}
+    [data-fade="3"]{animation-delay:.25s}
+    @keyframes fadeUp{to{opacity:1; transform:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>カヤー族（カレンニー族）</span>
+      </div>
+      <nav class="nav-links">
+        <a href="ethnic.html">← 戻る</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="pill" data-fade="1">Kayah • Karenni</div>
+        <h1 data-fade="2">カヤー族の文化と遺産</h1>
+        <p class="muted" data-fade="3">
+          カヤー族（カレンニー族）は、主にミャンマー東部のカヤー州に暮らしています。
+彼らは伝統的な衣装や音楽、そして山岳地帯での農業で知られています。
+カヤーの人々は活気ある文化的な慣習を守り続け、強い民族的アイデンティティを持っています。
+        </p>
+      </div>
+
+      <!-- FLAG -->
+      <figure id="flag" class="card" aria-label="Flag of Kayah State">
+        <div class="flag-wrap">
+          <img src="images/kayah.jpg" alt="Flag of Kayah State" style="width:100%;height:auto;">
+          <figcaption class="flag-caption">
+            <span>カヤー州</span>
+            <small>カヤー族のアイデンティティの象徴</small>
+          </figcaption>
+        </div>
+      </figure>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="card card-pad" id="about" data-fade="1">
+      <h2>カヤー族について（カレンニー族）</h2>
+      <p class="muted">
+        カヤー族（カレンニー族とも呼ばれる）は、いくつかの異なる言語や伝統を持つ複数の下位集団で構成されています。
+農業、織物作り、音楽は日常生活の中心的な要素です。
+この地域は山が多く、キリスト教とアニミズム（精霊信仰）が混在しています。
+      </p>
+      <ul class="list">
+        <li><strong>言語:</strong> カヤー語、ビルマ語</li>
+        <li><strong>宗教:</strong> キリスト教、アニミズム、仏教</li>
+        <li><strong>地域:</strong> ミャンマー東部のカヤー州</li>
+      </ul>
+    </section>
+
+    
+
+    <!-- CULTURE & TRADITIONS -->
+    <section class="grid-2" style="margin-top:24px">
+      <article class="card card-pad" data-fade="2">
+        <h2>伝統衣装と織物</h2>
+        <p class="muted">
+          カヤー族の衣装は色鮮やかで、女性は赤いチュニックを着ることが多く、織り模様には村や下位集団を示す特徴があります。
+織物は世代を超えて受け継がれてきた重要な伝統工芸です。
+        </p>
+      </article>
+
+      <article class="card card-pad" data-fade="3">
+        <h2>祭りと宗教</h2>
+        <p class="muted">
+          文化的な行事では、キリスト教の祝祭と伝統的なアニミズムの儀式が融合しています。
+        </p>
+        <ul class="list">
+          <li><strong>カヤー族の新年（カヤー・ニューイヤー）</strong> — 伝統的な踊り、音楽、スポーツ</li>
+          <li><strong>収穫祭</strong> 一年の収穫に感謝する祭り</li>
+          <li><strong>クリスマス</strong> — 地域の人々が集まり、広く祝われています。</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- FAMOUS PLACES -->
+    <section id="places" class="card card-pad" style="margin-top:24px">
+      <h2>有名な場所</h2>
+      <div class="grid-3" style="margin-top:10px">
+        <div class="card card-pad">
+          <h3>ロイコー</h3>
+          <p class="muted">州都であり、タウンゴェ・パゴダや文化博物館があります。</p>
+        </div>
+        <div class="card card-pad">
+          <h3>パン・ペット村</h3>
+          <p class="muted">カヤン族の故郷であり、伝統的な首長族の衣装で知られています。</p>
+        </div>
+        <div class="card card-pad">
+          <h3>デモソ</h3>
+          <p class="muted">朝市や文化祭で知られています。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAMOUS FOOD -->
+    <section id="food" class="card card-pad" style="margin-top:24px">
+      <h2>カヤー族の有名な料理</h2>
+      <p class="muted">カヤー州の伝統的な味は、豊かな香辛料と独特の地元の食材で知られています。</p>
+
+      <div class="gallery" style="margin-top:10px">
+        <figure>
+          <img src="images/kayah_sausage.jpg" alt="Kayah Sausage" loading="lazy">
+          <figcaption>カヤー・ソーセージ — 地元のハーブや香辛料で味付けされた香り高い豚肉のソーセージ。焼いてご飯や野菜と一緒に提供されることが多いです。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- REPRESENTATIVE ANIMALS -->
+    <section id="animals" class="card card-pad" style="margin-top:24px">
+      <h2>代表的な動物の写真</h2>
+      <p class="muted">カヤー州の森林や丘陵地帯で見られる野生動物：</p>
+
+      <div class="gallery" style="margin-top:10px">
+        <figure>
+          <img src="images/wild_boar.jpg" alt="Wild Boar (Sus scrofa)" loading="lazy">
+          <figcaption>イノシシ — カヤー州の険しい自然の中で、力強さと適応力の象徴とされています</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/sambar_deer.jpg" alt="Sambar Deer (Rusa unicolor)" loading="lazy">
+          <figcaption>シカ（サンバー）— 森林や丘陵に生息する優雅な動物で、地元の文化遺産の中で大切にされています。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    
+
+    <p class="foot">&copy;2025 Group F - Tokyo Technical College</p>
+  </main>
+
+  <footer></footer>
+
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      link.removeAttribute('target');
+    });
+  </script>
+</body>
+</html>
