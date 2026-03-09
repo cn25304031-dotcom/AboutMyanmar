@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bamar — Culture & Heritage of Myanmar</title>
+  <meta name="description" content="Introduction to the Bamar (Burman) ethnic group in Myanmar: culture, traditions, religion, famous places, flag, and representative animals." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --card: #111318;
+      --text: #eef1f5;
+      --muted: #aab3c2;
+      --brand: #29b36b;
+      --ring: #3ad07e;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji",sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 70% -10%, #1a1f2a 20%, transparent 60%), linear-gradient(180deg, #0a0b0f, #08090d 60%);
+      line-height: 1.6;
+    }
+    a{color: var(--brand); text-decoration: none}
+    a:hover{text-decoration: underline}
+    .container{max-width: var(--maxw); margin: 0 auto; padding: 24px}
+    header{
+      position: sticky; top:0; z-index: 20; backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(8,10,14,.85), rgba(8,10,14,.55));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px}
+    .brand .dot{width:10px; height:10px; border-radius:50%; background:var(--ring); box-shadow:0 0 12px var(--ring)}
+    .nav a{color:var(--text); opacity:.9; padding:8px 12px; border-radius:10px}
+    .nav a:hover{background:rgba(255,255,255,.06)}
+
+    .hero{
+      padding: 72px 0 32px;
+      display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center;
+    }
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr; padding-top:48px} }
+    .hero h1{font-size: clamp(32px, 4.5vw, 56px); line-height:1.1; margin:0 0 12px}
+    .hero p{color:var(--muted); font-size: clamp(14px, 1.5vw, 18px); margin:0}
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .card-pad{padding:22px}
+    .pill{
+      display:inline-block; font-size:12px; color:#0a0b0f; background:linear-gradient(90deg, var(--ring), #7df0b2);
+      padding:6px 10px; border-radius:999px; font-weight:700; letter-spacing:.25px; margin-bottom:10px;
+    }
+    section h2{font-size: clamp(22px, 2.4vw, 32px); margin: 0 0 10px}
+    .muted{color:var(--muted)}
+    .grid-2{display:grid; grid-template-columns: 1fr 1fr; gap:24px}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:24px}
+    @media (max-width: 1000px){ .grid-3{grid-template-columns: 1fr 1fr} }
+    @media (max-width: 700px){ .grid-2, .grid-3{grid-template-columns:1fr} }
+
+    .list{display:grid; gap:10px; margin: 12px 0 0; padding:0; list-style:none}
+    .list li{background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); padding:14px 16px; border-radius:12px}
+
+    .flag-wrap{padding:18px}
+    .flag-caption{display:flex; align-items:center; justify-content:space-between; color:var(--muted); font-size:14px; padding:0 4px 12px}
+
+    .gallery{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
+    @media (max-width: 900px){ .gallery{grid-template-columns: 1fr 1fr} }
+    @media (max-width: 560px){ .gallery{grid-template-columns: 1fr} }
+
+    .gallery figure{
+      border-radius: 14px; overflow:hidden; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03);
+      /* ensure consistent card inner spacing */
+      display:block;
+    }
+
+    /* default gallery thumbnails (consistent card height, cropped) */
+    .gallery img{display:block; width:100%; height:240px; object-fit:cover}
+    .gallery figcaption{padding:10px 12px; font-size:14px; color:var(--muted)}
+
+    /* Portrait/tall images: preserve aspect ratio and avoid cropping.
+       Add .portrait class to the <figure> that wraps tall images. */
+    .gallery figure.portrait {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px;
+      min-height:240px; /* keep card height consistent with others if image is small */
+    }
+    .gallery figure.portrait img {
+      height: auto;
+      max-height:520px; /* prevents extremely tall images from overflowing on large screens */
+      width: auto;
+      max-width:100%;
+      object-fit:contain;
+      display:block;
+    }
+
+    .foot{margin: 42px 0 24px; color: var(--muted); font-size: 13px; text-align:center}
+    .nav-links a {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--ring), #7df0b2);
+  color: #0a0b0f;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(58, 208, 126, 0.4);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(58, 208, 126, 0.8);
+  opacity: 0.95;
+}
+
+
+    [data-fade]{opacity:0; transform: translateY(8px); animation: fadeUp .8s ease .05s forwards}
+    [data-fade="1"]{animation-delay:.05s}
+    [data-fade="2"]{animation-delay:.15s}
+    [data-fade="3"]{animation-delay:.25s}
+    @keyframes fadeUp{to{opacity:1; transform:none}}
+  </style>
+</head>
+<body>
+  <!-- UNIVERSAL NAV -->
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>ミャンマーの民族グループ</span>
+      </div>
+      <nav class="nav-links">
+        <a href="ethnic.html">← 戻る</a>
+      </nav>
+      
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="pill" data-fade="1">Bamar • Burman</div>
+        <h1 data-fade="2">バマー文化と遺産</h1>
+        <p class="muted" data-fade="3">
+          ビルマ族はミャンマー最大の民族であり、中央平原に集中しています。彼らの歴史、上座部仏教の伝統、そして河川を基盤とした文化は、この国の文化を強く形作っています。
+        </p>
+      </div>
+
+      <!-- FLAG (Myanmar national flag) -->
+      <figure id="flag" class="card" aria-label="Flag of Myanmar">
+        <div class="flag-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Myanmar.svg" 
+               alt="Flag of Myanmar" style="width:100%;height:auto;">
+          <figcaption class="flag-caption">
+            <span>ミャンマーの国旗</span>
+            <small>ビルマの国旗（バマー族の中心地に関連する旗）</small>
+          </figcaption>
+        </div>
+      </figure>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="card card-pad" id="about" data-fade="1">
+      <h2>バマー族について</h2>
+      <p class="muted">
+        エーヤワディー川流域を中心に、ビルマ族のコミュニティは稲作、工芸、貿易に従事しています。伝統的なビルマ文化は、パゴダ祭り、漆器、人形劇、宮廷音楽に反映されています。
+      </p>
+      <ul class="list">
+        <li><strong>言語:</strong>ビルマ語</li>
+        <li><strong>宗教:</strong>主に上座部仏教</li>
+        <li><strong>地域:</strong>ミャンマー中部（ザガイン、マンダレー、マグウェ、エーヤワディ管区）</li>
+      </ul>
+    </section>
+
+    <section class="section">
+  <h2>伝統衣装</h2>
+  <p>
+    バマー族の伝統衣装は男女共に*ロンジー*で、シンプルで上品なトップスと合わせて着用されます。
+    男性は*タイクポン*（ジャケット）と*ガウンバウン*（頭飾り）を着用し、女性はフィットしたブラウスとロンジーを組み合わせ、
+    上品さと控えめさを表現します。
+  </p>
+  <div class="gallery" style="margin-top:10px;">
+    <figure>
+      <img src="images/bamar_dress.jpg" alt="伝統的なバマー族の衣装" loading="lazy"
+           style="width:100%; height:auto; object-fit:contain;">
+      <figcaption>伝統的なバマー族の衣装 — ロンジー、タイクポン、ガウンバウン。</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+
+    <!-- CULTURE & TRADITIONS -->
+    <section class="grid-2" style="margin-top:24px">
+      <article class="card card-pad" data-fade="2">
+        <h2>芸術と工芸</h2>
+        <p class="muted">
+          漆器（バガン）、木彫、マリオネット人形、金箔工芸で有名です。
+        </p>
+      </article>
+
+      <article class="card card-pad" data-fade="3">
+        <h2>祭りと宗教</h2>
+        <p class="muted">
+          主要な祭りは仏教暦と川の季節に従って行われます。
+        </p>
+        <ul class="list">
+          <li><strong>ティンジャン</strong> — 新年の水かけ祭り</li>
+          <li><strong>タディンギュット</strong> — 光の祭り</li>
+          <li><strong>パゴダ祭り</strong> — 市場、音楽、そして功徳を積むこと</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- FAMOUS PLACES -->
+    <section id="places" class="card card-pad" style="margin-top:24px">
+      <h2>有名な場所</h2>
+      <div class="grid-3" style="margin-top:10px">
+        <div class="card card-pad">
+          <h3>バガン</h3>
+          <p class="muted">何千もの寺院や仏塔がある古代都市</p>
+        </div>
+        <div class="card card-pad">
+          <h3>マンダレー</h3>
+          <p class="muted">工芸品と修道院で有名な文化の中心地</p>
+        </div>
+        <div class="card card-pad">
+          <h3>エーヤワディー川</h3>
+          <p class="muted">バマー族の中心地の生命線</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAMOUS FOOD -->
+    <section id="food" class="card card-pad" style="margin-top:24px">
+      <h2>バマーの名物料理</h2>
+      <p class="muted">バランスのとれた風味と多様な食感で知られる、バマー族の中心地の伝統料理。</p>
+
+      <div class="gallery" style="margin-top:10px">
+        <figure>
+          <img src="images/mohinga.jpg" alt="Mohinga" loading="lazy">
+          <figcaption>モヒンガー — ミャンマーの国民食。風味豊かな魚介のスープにレモングラスとバナナの茎を加え、カリカリのフリッターを添えたライスヌードルスープ。ミャンマー全土で朝食の定番です。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- REPRESENTATIVE ANIMALS -->
+    <section id="animals" class="card card-pad" style="margin-top:24px">
+      <h2>代表的な動物の写真</h2>
+      <p class="muted">マンダレーと中央バマル乾燥地帯の象徴的な野生生物</p>
+
+      <div class="gallery" style="margin-top:10px">
+        <figure>
+          <img src="images/burmese_star_tortoise.jpg" alt="Burmese Star Tortoise (Geochelone platynota)" loading="lazy">
+          <figcaption>ビルマホシガメ — ミャンマーの乾燥地帯に固有の種で、自然保護のシンボルです。</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/elds_deer_thamin.jpg" alt="Eld’s Deer / Thamin (Rucervus eldii thamin)" loading="lazy">
+          <figcaption>エルド鹿（タミン）—マンダレーの伝統と結びついた優雅な乾燥地帯の鹿</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/burmese_python.jpg" alt="Burmese Python (Python bivittatus)" loading="lazy">
+          <figcaption>ビルマのニシキヘビ — 深い文化的影響力を持つ世界的に有名な巨大ヘビ</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer>
+    <p>&copy;2025 Group F - Tokyo Technical College</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      link.removeAttribute('target');
+    });
+  </script>
+</body>
+</html>
