@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ミャンマーの民族の多様性</title>
+<style>
+  :root{
+    --bg: #0b0c10;
+    --glass: rgba(255,255,255,.06);
+    --glass-hover: rgba(255,255,255,.12);
+    --text: #f6f7f9;
+    --muted: #b8bec9;
+    --stroke: rgba(255,255,255,.18);
+    --ring: rgba(255,255,255,.35);
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(0,0,0,.45);
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ height:100%; }
+  body{
+    margin:0; color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    line-height:1.6; background: var(--bg); position:relative; overflow-x:hidden;
+  }
+
+  /* Myanmar map background */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background:
+      radial-gradient(900px 500px at 20% -10%, rgba(255,255,255,.06), transparent 60%),
+      radial-gradient(900px 500px at 120% 110%, rgba(255,255,255,.05), transparent 60%),
+      url("images/bg/myanmar-map.png") center/contain no-repeat;  /* <-- path to your map image */
+    opacity:.18;               /* faint; adjust to taste */
+    filter: grayscale(100%) contrast(110%) brightness(170%);
+    pointer-events:none;       /* clicks pass through */
+  }
+
+  header{ text-align:center; padding:64px 20px 28px; position:relative; z-index:1; }
+  h1{ margin:0 0 10px; font-weight:800; letter-spacing:.2px; font-size:clamp(1.6rem, 2.2vw + 1rem, 2.6rem); text-shadow:0 2px 24px rgba(0,0,0,.35); }
+  header p{ margin:0 auto; max-width:760px; color:var(--muted); font-size:clamp(.95rem, .3vw + .8rem, 1.05rem); }
+
+  .panel{
+    position:relative; z-index:1;
+    margin:28px auto 40px; max-width:1040px; padding:22px;
+    background:var(--glass);
+    backdrop-filter: blur(14px) saturate(120%);
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
+    border:1px solid var(--stroke); border-radius:var(--radius); box-shadow:var(--shadow);
+  }
+
+  .grid{
+    display:grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap:14px;
+  }
+
+  .card{
+    display:flex; align-items:center; gap:14px;
+    padding:16px 18px; border-radius:14px; text-decoration:none; color:var(--text);
+    background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+    border:1px solid var(--stroke);
+    transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
+    box-shadow:0 6px 16px rgba(0,0,0,.35);
+  }
+
+  /* Circular flag */
+  .flag{
+    width:36px; height:36px; flex:0 0 36px; border-radius:50%;
+    object-fit:cover; border:1px solid var(--stroke);
+    background: rgba(255,255,255,.08);
+  }
+
+  .card .label{ display:flex; flex-direction:column; }
+  .card .label span{ font-weight:700; letter-spacing:.2px; }
+  .card .label small{ color:var(--muted); font-size:.9rem; }
+
+  .card:hover, .card:focus-visible{
+    background:var(--glass-hover); border-color:var(--ring);
+    transform: translateY(-3px); outline:none; box-shadow:0 12px 26px rgba(0,0,0,.5);
+  }
+
+  .actions{ margin-top:22px; display:flex; justify-content:center; }
+  .btn{
+    display:inline-block; color:var(--text); text-decoration:none; padding:10px 18px;
+    border:1px solid var(--stroke); border-radius:12px; background: rgba(255,255,255,.04);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    transition: background .18s ease, border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+  }
+  .btn:hover,.btn:focus-visible{ background:rgba(255,255,255,.1); border-color:var(--ring); transform:translateY(-2px); box-shadow:0 10px 22px rgba(0,0,0,.45); outline:none; }
+
+  @media (prefers-reduced-motion: reduce){
+    .card,.btn{ transition:none; transform:none !important; }
+  }
+  .nav-links a {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--ring), #7df0b2);
+  color: #0a0b0f;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(58, 208, 126, 0.4);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(58, 208, 126, 0.8);
+  opacity: 0.95;
+}
+.nav-links {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 10;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>ミャンマーの民族多様性を探る</h1>
+  <p>ミャンマーには135以上の民族が暮らしています。
+私たちの人々が持つ伝統、文化、そして美しさを発見してください。</p>
+</header>
+
+<section class="panel">
+  <div class="grid">
+    <a class="card" href="kachin.html">
+      <img class="flag" src="images/kachin_flag.jpg" alt="Kachin flag" loading="lazy" />
+      <div class="label"><span>Kachin</span><small>カチン</small></div>
+    </a>
+    <a class="card" href="kayah.html">
+      <img class="flag" src="images/kayah.jpg" alt="Kayah flag" loading="lazy" />
+      <div class="label"><span>Kayah</span><small>カヤー</small></div>
+    </a>
+    <a class="card" href="kayin.html">
+      <img class="flag" src="images/kayin.jpg" alt="Kayin flag" loading="lazy" />
+      <div class="label"><span>Kayin</span><small>カイン</small></div>
+    </a>
+    
+    <a class="card" href="chin.html">
+      <img class="flag" src="images/chin.jpg" alt="Chin flag" loading="lazy" />
+      <div class="label"><span>Chin</span><small>チン</small></div>
+    </a>
+    <a class="card" href="bamar.html">
+      <img class="flag" src="images/bamar_flag.jpg
+      " alt="Bamar flag" loading="lazy" />
+      <div class="label"><span>Bamar</span><small>バマー</small></div>
+    </a>
+    <a class="card" href="mon.html">
+      <img class="flag" src="images/mon_state_flag.jpg" alt="Mon flag" loading="lazy" />
+      <div class="label"><span>Mon</span><small>モン</small></div>
+    </a>
+    <a class="card" href="rakhine.html">
+      <img class="flag" src="images/rakhine_flag.jpg" alt="Rakhine flag" loading="lazy" />
+      <div class="label"><span>Rakhine</span><small>ラカイン</small></div>
+    </a>
+
+
+    <a class="card" href="shan.html">
+      <img class="flag" src="images/shan_flag.jpg" alt="Shan flag" loading="lazy" />
+      <div class="label"><span>Shan</span><small>シャン</small></div>
+    </a>
+</div>
+ 
+
+  
+</section>
+<nav class="nav-links">
+        <a href="index.html">← 戻る</a>
+      </nav>
+     
+
+</body>
+</html>
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    link.removeAttribute('target');
+  });
+</script>
+ 
