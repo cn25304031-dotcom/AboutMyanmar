@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    /* Header styling */
+    header {
+      background-color: #005599;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    /* Main content */
+    main {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    main p {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    /* Form elements */
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    form button {
+      background-color: #005599;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #004080;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+      margin-top: 40px;
+    }
+
+    /* Back link */
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .back-link a {
+      color: #005599;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    .nav-links {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 10;
+}
+
+/* Green button style */
+.nav-links a {
+  display: inline-block;
+  background: linear-gradient(90deg, #29b36b, #3ad07e);
+  color: #0a0b0f;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(58, 208, 126, 0.4);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(58, 208, 126, 0.8);
+  opacity: 0.95;
+}
+
+/* Click (active) effect */
+.nav-links a:active {
+  background: linear-gradient(90deg, #1f8a54, #2fb069);
+  box-shadow: 0 0 8px rgba(31, 138, 84, 0.6);
+  transform: translateY(1px);
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contact Us / お問い合わせ</h1>
+  </header>
+
+  <main>
+   <p>
+  This form is for demonstration purposes only as part of a school project.  
+  Please do not submit real personal information.<br><br>
+  このフォームは学校のプロジェクト用のデモとして作成されたものです。  
+  実際の個人情報を送信しないでください。
+</p>
+
+
+
+    <form>
+      <label for="name">Name / お名前:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="message">Message / メッセージ:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+   <nav class="nav-links">
+        <a href="index.html">← 戻る</a>
+      </nav>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Group F - Tokyo Technical College</p>
+  </footer>
+
+</body>
+</html>
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    link.removeAttribute('target');
+  });
+</script>
